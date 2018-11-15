@@ -9,4 +9,7 @@
     <string name="lbl_endereco">Endereço</string>
     <string name="lbl_observaces">Observações</string>
     <string name="lbl_data_cadastro">Data Cadastro</string>
+    <string name="action_salvar">Salvar</string>
+    <string name="action_alterar">Alterar</string>
+    <string name="action_excluir">Excluir</string>
 </resources>
