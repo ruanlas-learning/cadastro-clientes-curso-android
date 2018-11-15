@@ -1,5 +1,6 @@
 package com.example.ruan.cadastrodeclientes;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,7 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageButton;
 
-public class ActCadastro extends AppCompatActivity {
+public class ActCadastro extends AppCompatActivity implements View.OnClickListener {
 
     private ImageButton btnAdicionar;
 
@@ -22,6 +23,7 @@ public class ActCadastro extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         btnAdicionar = (ImageButton)findViewById(R.id.btn_adicionar);
+        btnAdicionar.setOnClickListener(this);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -53,5 +55,13 @@ public class ActCadastro extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        if (v.getId() == R.id.btn_adicionar){
+            Intent intent = new Intent(this, ActCadClientes.class);
+        }
     }
 }
