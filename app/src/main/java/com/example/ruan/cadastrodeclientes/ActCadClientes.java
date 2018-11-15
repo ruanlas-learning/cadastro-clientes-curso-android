@@ -1,5 +1,6 @@
 package com.example.ruan.cadastrodeclientes;
 
+import android.opengl.EGLExt;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,11 +16,7 @@ public class ActCadClientes extends AppCompatActivity {
     private EditText edtNome, edtEmail, edtTelefone, edtEndereco, edtObservacoes, edtDataCadastro;
     private Spinner spnTelefone, spnEmail, spnEndereco, spnDataCadastro;
 
-    private ArrayAdapter<String> adpTipoEmail;
-    private ArrayAdapter<String> adpTipoTelefone;
-    private ArrayAdapter<String> adpTipoEndereco;
-    private ArrayAdapter<String> adpTipoData;
-
+    private ArrayAdapter<String> adpTipoEmail, adpTipoTelefone, adpTipoEndereco, adpTipoData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +38,24 @@ public class ActCadClientes extends AppCompatActivity {
         spnTelefone = (Spinner)findViewById(R.id.spn_telefone);
         spnDataCadastro = (Spinner)findViewById(R.id.spn_data);
 
+        // O primeiro parâmetro do construtor é passado a Activity que estará com os componentes
+        // que receberá os dados, e o segundo parâmetro é passado o tipo de lista que será
+        // utilizado no componente. Neste segundo parâmetro, está sendo definido que cada linha
+        // será um item do menu.
+        // A classe android.R.layout contém algumas tipos padrões
+        adpTipoEmail = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item);
+        // o método abaixo permite configurar como os items serão exibidos. Neste caso, está
+        // sendo configurado como menu dropdown
+        adpTipoEmail.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        adpTipoData = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item);
+        adpTipoData.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        adpTipoEndereco = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item);
+        adpTipoEndereco.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        adpTipoTelefone = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item);
+        adpTipoTelefone.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
