@@ -59,7 +59,7 @@
 
             <Spinner
                 android:id="@+id/spn_telefone"
-                android:layout_width="match_parent"
+                android:layout_width="400dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2" />
         </LinearLayout>
@@ -93,7 +93,7 @@
 
             <Spinner
                 android:id="@+id/spn_email"
-                android:layout_width="match_parent"
+                android:layout_width="400dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2" />
         </LinearLayout>
@@ -127,7 +127,7 @@
 
             <Spinner
                 android:id="@+id/spn_endereco"
-                android:layout_width="match_parent"
+                android:layout_width="400dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2" />
         </LinearLayout>
@@ -161,7 +161,7 @@
 
             <Spinner
                 android:id="@+id/spn_data"
-                android:layout_width="match_parent"
+                android:layout_width="400dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2" />
         </LinearLayout>
@@ -189,3 +189,7 @@
     </LinearLayout>
 
 </LinearLayout>
+
+<!-- medidas em 'dp' (densidade por píxel) é equivalente às medidas de '%' dos elementos dos sites,
+     o que torna os componentes/elementos "responsivos".
+ -->
