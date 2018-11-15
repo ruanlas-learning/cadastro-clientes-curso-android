@@ -8,4 +8,5 @@
     <string name="lbl_email">Email</string>
     <string name="lbl_endereco">Endereço</string>
     <string name="lbl_observaces">Observações</string>
+    <string name="lbl_data_cadastro">Data Cadastro</string>
 </resources>
