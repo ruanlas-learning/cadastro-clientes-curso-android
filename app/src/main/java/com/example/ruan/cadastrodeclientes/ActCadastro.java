@@ -9,11 +9,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ListView;
 
 public class ActCadastro extends AppCompatActivity implements View.OnClickListener {
 
     private ImageButton btnAdicionar;
+    private ListView lstContatos;
+    private EditText edtPesquisa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +28,8 @@ public class ActCadastro extends AppCompatActivity implements View.OnClickListen
 
         btnAdicionar = (ImageButton)findViewById(R.id.btn_adicionar);
         btnAdicionar.setOnClickListener(this);
+        lstContatos = (ListView)findViewById(R.id.lst_contatos);
+        edtPesquisa = (EditText)findViewById(R.id.edt_pesquisa);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -62,6 +68,7 @@ public class ActCadastro extends AppCompatActivity implements View.OnClickListen
 
         if (v.getId() == R.id.btn_adicionar){
             Intent intent = new Intent(this, ActCadClientes.class);
+            startActivity(intent);
         }
     }
 }
