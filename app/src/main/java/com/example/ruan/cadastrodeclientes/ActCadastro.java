@@ -8,8 +8,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageButton;
 
 public class ActCadastro extends AppCompatActivity {
+
+    private ImageButton btnAdicionar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +20,8 @@ public class ActCadastro extends AppCompatActivity {
         setContentView(R.layout.act_cadastro);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        btnAdicionar = (ImageButton)findViewById(R.id.btn_adicionar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
