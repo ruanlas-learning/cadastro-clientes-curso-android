@@ -57,6 +57,23 @@ public class ActCadClientes extends AppCompatActivity {
         adpTipoTelefone = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item);
         adpTipoTelefone.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
+        spnEmail.setAdapter(adpTipoEmail);
+        spnTelefone.setAdapter(adpTipoTelefone);
+        spnEndereco.setAdapter(adpTipoEndereco);
+        spnDataCadastro.setAdapter(adpTipoData);
+
+        adpTipoEmail.add("Pessoal");
+        adpTipoEmail.add("Trabalho");
+
+        adpTipoTelefone.add("Celular");
+        adpTipoTelefone.add("Fixo");
+        adpTipoTelefone.add("Trabalho");
+
+        adpTipoEndereco.add("Casa");
+        adpTipoEndereco.add("Trabalho");
+
+        adpTipoData.add("Cadastro");
+        adpTipoData.add("Compra");
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
